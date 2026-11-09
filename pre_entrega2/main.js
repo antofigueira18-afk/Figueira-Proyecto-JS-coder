@@ -1,4 +1,3 @@
-
 let mouse = 8;
 let teclado = 3;
 let auriculares = 0;
@@ -6,9 +5,7 @@ let monitor = 5;
 let webcam = 4;
 
 let consulta = true;
-let producto;
 let stock;
-
 
 while (consulta === true) {
   let producto = prompt("Ingrese el nombre del producto que desea consultar",).toLowerCase();
@@ -31,11 +28,12 @@ while (consulta === true) {
     console.log("Producto con stock suficiente");
   } else if (stock > 0) {
     console.log("Producto con stock limitado");
-  } else if (stock === 0) {
+  } else {
     console.log("Producto sin stock");
   }
 
-  let continuar = prompt("¿Desea consultar otro producto? SI / NO",).toLowerCase();
+  let continuar = prompt(
+    "¿Desea consultar otro producto? SI / NO",).toLowerCase();
 
   if (continuar === "no") {
     consulta = false;
